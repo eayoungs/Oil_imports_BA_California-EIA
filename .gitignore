@@ -115,3 +115,4 @@ ENV/
 .R*
 *.Rhistory
 *.Rproj
+.Rproj.user
