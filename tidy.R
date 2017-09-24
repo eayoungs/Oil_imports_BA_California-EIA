@@ -7,7 +7,7 @@
 #install.packages("reshape2")
 library("reshape2")
 
-function_name <- function(csv_file_in, num_years, head_skip, end){
+tidyRefineryImportsEIA <- function(csv_file_in, csv_file_out, num_years, head_skip, end){
     # Description:
     #   
     # 
@@ -25,14 +25,14 @@ function_name <- function(csv_file_in, num_years, head_skip, end){
     dat = dat[complete.cases(dat),] # Remove empty rows adjacent to country of origin marker
     dat[dat == '--'] = 0 # Correct null indicator with numerical value
     dat = sapply(dat, as.numeric)
-    dat_var = melt(dat) # TODO eayoungs@gmail.com: Remove extraneous rows
+    dat_var = melt(t(dat)) # TODO eayoungs@gmail.com: Remove extraneous rows
     dat_var = dat_var$value
 
     # Create variable: origin
     origins_raw = imports[(head_skip+1):end, 1]
     origins = origins_raw[grepl("[[:lower:]]", origins_raw)] # Only countries of origin have lowercase letters
     origin_locs = which(grepl("[[:lower:]]", origins_raw)) # Row numbers of ^
-    origin_locs = append(origin_locs, length(origins_raw)) # Add terminus of list for final repetition
+    origin_locs = append(origin_locs, length(origins_raw)+1) # Add terminus of list for final repetition
     origin_diff = (diff(origin_locs)-1)*8 # Vector of differences between row numbers
     origin_var = rep.int(origins, times = origin_diff)
 
@@ -45,8 +45,8 @@ function_name <- function(csv_file_in, num_years, head_skip, end){
     years_var = rep(years, nrow(dat)) # Repeat list of years for each permutation of origin & destination
     years_var = unlist(years_var, use.names = FALSE)
 
-    # TODO eayoungs@gmail.com: Fix dimensions of data frame
-    df = data.frame(destination_var, years_var, dat_var)#origin_var, destination_var, years_var, dat_var)
+    df = data.frame(origin_var, destination_var, years_var, dat_var)
+    write.csv(df, file = csv_file_out)
 
     return(df)
 }
