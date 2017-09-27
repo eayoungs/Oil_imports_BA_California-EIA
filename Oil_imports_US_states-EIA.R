@@ -78,3 +78,37 @@ tidyRefineryImportsEIA <- function(csv_file_in, csv_file_out, num_years, head_sk
     return(df)
 }
 
+# https://thedatagame.com.au/2015/12/14/visualising-the-2015-nba-draft-in-r/
+
+library(rjson)
+library(RCurl)
+library(sqldf)
+library(googleVis)
+
+
+imports = read.csv("Imports_of_all_grades_from_country_of_origin_to_CA.csv",
+                   stringsAsFactors = FALSE, row.names = 1, na.strings=c("","NA"))
+imports$dat_var = sapply(imports$dat_var, as.numeric)
+
+# summarise data
+importsSankey = sqldf("SELECT origin_var, destination_var, dat_var AS BARRELS FROM imports
+                      WHERE NOT origin_var='World' AND years_var='2009' AND destination_var IN ('CHEVRON USA / RICHMOND / CA',
+                      'PHILLIPS 66 CO / SAN FRANCISCO / CA',
+                      'VALERO REFINING CO CALIFORNIA / BENICIA / CA',
+                      'SHELL OIL PRODUCTS US / MARTINEZ / CA',
+                      'TESORO CORP / GOLDEN EAGLE / CA') GROUP BY 1,2")
+#                    UNION ALL
+#                      SELECT ORGANIZATION, (TEAM_CITY||' '||TEAM_NAME) AS NBA_TEAM, COUNT(PLAYER_NAME) AS PLAYERS
+#                      FROM draft
+#                      GROUP BY 1,2")
+
+
+# Sankey diagram using googleVis
+plot(gvisSankey(importsSankey, from="origin_var", to="destination_var", weight="dat_var",
+    options=list(height=800, width=850,
+    sankey="{
+      link:{color:{fill: 'lightgray', fillOpacity: 0.7}},
+      node:{nodePadding: 5, label:{fontSize: 12}, interactivity: true, width: 20},
+    }")
+  )
+)
