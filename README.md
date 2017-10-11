@@ -1,8 +1,15 @@
 For a rendering of the data visualization, see the project page at https://eayoungs.github.io/Oil_imports_BA_California-EIA/
 
-# Project Title
+# Environmental Impacts of Oil Imports to Bay Area Refineries
 
-One Paragraph of project description goes here
+This project is a data visualization of the flows of oil from around the world to refineries in the San Francisco Bay Area.
+The intent is to make the changes in carbon emissions related to the various crude oil grades from each country of import and
+compare that to the changes in air polutants regulated by the Bay Area Air Quality Manangement Board (BAAQMD).
+
+The thesis, based on scientific papers, commissioned by BAAQMD itself, from the [Union of Concerned Scientists](http://www.ucsusa.org/sites/default/files/legacy/assets/documents/global_warming/oil-refinery-CO2-performance.pdf)    and the staff's
+own proposed [rule 12-16](http://www.baaqmd.gov/~/media/files/planning-and-research/rules-and-regs/workshops/2015/1215-1216-workshop/1215_1216_fs_022715.pdf)
+                         , is that the driving factors for carbon emissions are separate and independent of those that produce
+other air pollutants known as [criteria air pollutants (CAP)](http://www.baaqmd.gov/research-and-data/emission-inventory/criteria-air-pollutants)                                     [and toxic air contaminants](http://www.baaqmd.gov/research-and-data/air-toxics). 
 
 ## Getting Started
 
