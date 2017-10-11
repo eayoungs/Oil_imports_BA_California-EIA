@@ -9,21 +9,37 @@ compare that to the changes in air polutants regulated by the Bay Area Air Quali
 The thesis, based on scientific papers, commissioned by BAAQMD itself, from the [Union of Concerned Scientists](http://www.ucsusa.org/sites/default/files/legacy/assets/documents/global_warming/oil-refinery-CO2-performance.pdf)    and the staff's
 own proposed [rule 12-16](http://www.baaqmd.gov/~/media/files/planning-and-research/rules-and-regs/workshops/2015/1215-1216-workshop/1215_1216_fs_022715.pdf)
                          , is that the driving factors for carbon emissions are separate and independent of those that produce
-other air pollutants known as [criteria air pollutants (CAP)](http://www.baaqmd.gov/research-and-data/emission-inventory/criteria-air-pollutants)                                     [and toxic air contaminants](http://www.baaqmd.gov/research-and-data/air-toxics). 
+other air pollutants known as [criteria air pollutants (CAP)](
+                                              http://www.baaqmd.gov/research-and-data/emission-inventory/criteria-air-pollutantsk)
+                                                             [and toxic air contaminants](
+                                                                              http://www.baaqmd.gov/research-and-data/air-toxics).
 
-<!--
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The primary data sources for data in this project are from the [Energy Information Administration](https://tinyurl.com/y9md3g79)
+and the [California Air Resources Board](https://www.arb.ca.gov/app/emsinv/facinfo/facinfo.php).
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+The data was reformed according to the tenents of [Tidy Data](
+                                                          https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+                                                             , which essentially reforms the as table in a data frame. This
+allows the use of SQL queries on the data frame, thereby reducing the confusion and messiness of operating. The simple query
+shown below, for example was used to get all of the variables used in the Sankey diagram that can be seen on the project page.
+(link at the top of this page)
 
-```
-Give examples
+```sql
+SELECT origin_var, destination_var, dat_var AS BARRELS FROM imports
+WHERE NOT origin_var='World' AND years_var='2009' AND destination_var IN
+  ('CHEVRON USA / RICHMOND / CA',
+  'PHILLIPS 66 CO / SAN FRANCISCO / CA',
+  'VALERO REFINING CO CALIFORNIA / BENICIA / CA',
+  'SHELL OIL PRODUCTS US / MARTINEZ / CA',
+  'TESORO CORP / GOLDEN EAGLE / CA')
+  GROUP BY 1,2
 ```
 
+<!--
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
