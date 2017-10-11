@@ -11,6 +11,7 @@ own proposed [rule 12-16](http://www.baaqmd.gov/~/media/files/planning-and-resea
                          , is that the driving factors for carbon emissions are separate and independent of those that produce
 other air pollutants known as [criteria air pollutants (CAP)](http://www.baaqmd.gov/research-and-data/emission-inventory/criteria-air-pollutants)                                     [and toxic air contaminants](http://www.baaqmd.gov/research-and-data/air-toxics). 
 
+<!--
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -94,3 +95,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
+-->
