@@ -69,7 +69,7 @@ SankeyRefineryImportsEIA <- function(csv_file_in){
   imports = read.csv(csv_file_in, stringsAsFactors = FALSE, row.names = 1, na.strings=c("","NA"))
   imports$dat_var = sapply(imports$dat_var, as.numeric)
 
-  # TODO: (eayoungs@gmail.com) - Replace list of facilities with a variable to be passed as a parameter to the function
+  # TODO (eayoungs@gmail.com): - Replace list of facilities with a variable to be passed as a parameter to the function
   #                            - Set default value for parameter, test for parameter & assign all unique faciliies to list
   importsSankey = sqldf("SELECT origin_var, destination_var, dat_var AS BARRELS FROM imports
                         WHERE NOT origin_var='World' AND years_var='2009' AND destination_var IN
