@@ -1,0 +1,82 @@
+"Imports of all grades from World to Total U.S."
+"https://www.eia.gov/petroleum/imports/browser/#/?d=0g000000000&dt=RS&sid=PET_IMPORTS.WORLD-US-ALL.M~PET_IMPORTS.WORLD-RP_1-ALL.M~PET_IMPORTS.WORLD-RP_2-ALL.M~PET_IMPORTS.WORLD-RP_3-ALL.M~PET_IMPORTS.WORLD-RP_4-ALL.M~PET_IMPORTS.WORLD-RP_5-ALL.M~PET_IMPORTS.WORLD-RP_6-ALL.M&vs=PET_IMPORTS.WORLD-US-ALL.M"
+"Wed Sep 20 2017 12:48:14 GMT-0700 (PDT)"
+"Source: U.S. Energy Information Administration"
+"<span style='float:right;'>(thousand barrels)</span>","2009","2010","2011","2012","2013","2014","2015","2016"
+"Pinned Series",,,,,,,,
+"Imports of all grades from World to Total U.S., monthly","--","--","--","--","--","--","--","--"
+"Imports of all grades from World to PADD4 (Rocky Mountain), monthly","--","--","--","--","--","--","--","--"
+"Imports of all grades from World to PADD5 (West Coast), monthly","--","--","--","--","--","--","--","--"
+"Imports of all grades from World to PADD6 (Territories), monthly","--","--","--","--","--","--","--","--"
+"Imports of all grades from World to PADD1 (East Coast), monthly","--","--","--","--","--","--","--","--"
+"Imports of all grades from World to PADD2 (Midwest), monthly","--","--","--","--","--","--","--","--"
+"Imports of all grades from World to PADD3 (Gulf Coast), monthly","--","--","--","--","--","--","--","--"
+"All grades",,,,,,,,
+"World",,,,,,,,
+"California",270690,293366,299164,288965,286761,294700,304913,320100
+"Algeria",,,,,,,,
+"California","--","--","--",1310,74,"--","--","--"
+"Angola",,,,,,,,
+"California",12913,7040,11163,14931,12454,13074,14291,10545
+"Argentina",,,,,,,,
+"California",4450,3523,3173,1046,"--","--","--",868
+"Australia",,,,,,,,
+"California",585,1033,2293,1176,523,"--",1179,657
+"Azerbaijan",,,,,,,,
+"California",530,"--","--","--","--","--","--","--"
+"Belize",,,,,,,,
+"California","--","--","--","--","--","--",360,"--"
+"Bolivia",,,,,,,,
+"California",922,"--","--","--","--","--","--","--"
+"Brazil",,,,,,,,
+"California",25560,22383,16713,9809,8570,7070,15900,8853
+"Cameroon",,,,,,,,
+"California","--",602,"--","--","--","--","--","--"
+"Canada",,,,,,,,
+"California",13765,19268,11191,14316,15491,14541,11350,10364
+"Chad",,,,,,,,
+"California",375,"--",380,"--",720,"--","--","--"
+"Colombia",,,,,,,,
+"California",14463,15749,27316,34279,22601,24287,39990,45689
+"Congo (Brazzaville)",,,,,,,,
+"California","--","--",890,1015,"--","--","--","--"
+"Congo (Kinshasa)",,,,,,,,
+"California","--","--","--",132,"--","--","--","--"
+"Ecuador",,,,,,,,
+"California",48807,65135,69510,55026,65472,50122,61566,74069
+"Equatorial Guinea",,,,,,,,
+"California","--","--","--",1209,4716,1323,1882,952
+"Indonesia",,,,,,,,
+"California","--",207,"--","--","--","--","--",300
+"Iraq",,,,,,,,
+"California",51573,57651,46399,53802,53109,65509,16442,14054
+"Italy",,,,,,,,
+"California","--","--","--",308,"--","--","--","--"
+"Kuwait",,,,,,,,
+"California",2997,799,887,4659,4673,538,24228,27942
+"Libya",,,,,,,,
+"California","--","--","--",530,77,"--","--","--"
+"Mauritania",,,,,,,,
+"California","--","--","--","--",625,"--","--","--"
+"Mexico",,,,,,,,
+"California","--","--","--","--","--",4622,"--",700
+"Netherlands",,,,,,,,
+"California","--","--","--","--","--","--","--",314
+"Nigeria",,,,,,,,
+"California","--",1245,"--",584,678,"--","--",410
+"Oman",,,,,,,,
+"California",9425,4008,6984,1645,271,"--","--",10935
+"Peru",,,,,,,,
+"California",5338,4962,3721,2566,4135,2725,903,666
+"Russia",,,,,,,,
+"California",993,17937,10666,9528,5948,3333,4259,2496
+"Saudi Arabia",,,,,,,,
+"California",66488,68277,83200,78005,84698,105036,110251,108381
+"Thailand",,,,,,,,
+"California",1332,"--","--","--","--","--","--","--"
+"Trinidad and Tobago",,,,,,,,
+"California",359,180,"--",719,"--","--","--","--"
+"United Arab Emirates",,,,,,,,
+"California",4819,295,450,"--","--","--","--",1021
+"Venezuela",,,,,,,,
+"California",4996,3072,4228,2370,1926,2520,2312,884 
